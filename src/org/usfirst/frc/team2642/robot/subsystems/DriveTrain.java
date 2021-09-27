@@ -15,7 +15,7 @@ public class DriveTrain extends PIDSubsystem {
 	private boolean isDriveStraight = true;
 
 	//Drive
-	RobotDrive robotdrive = new RobotDrive(RobotMap.left,
+	DifferentialDrive robotdrive = new DifferentialDrive(RobotMap.left,
 			RobotMap.right);
 
 	//Encoders for drive
