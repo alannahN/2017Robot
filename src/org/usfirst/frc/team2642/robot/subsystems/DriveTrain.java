@@ -2,7 +2,7 @@ package org.usfirst.frc.team2642.robot.subsystems;
 
 import edu.wpi.first.wpilibj.AnalogGyro;
 import org.usfirst.frc.team2642.robot.RobotMap;
-import org.usfirst.frc.team2642.robot.commands.drive.ArcadeDrive;
+import org.usfirst.frc.team2642.robot.commands.drive.DifferentialDrive;
 
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.RobotDrive;
@@ -32,11 +32,11 @@ public class DriveTrain extends PIDSubsystem {
 
 	//Standard driving
 	public void drive(double y, double x){
-		robotdrive.arcadeDrive(-y, -x);
+		robotdrive.DifferentialDrive(-y, -x);
 	}
 	
 	public void stop(){
-		robotdrive.arcadeDrive(0, 0);
+		robotdrive.DifferentialDrive(0, 0);
 	}
 
 	public double getGyro() {
@@ -116,7 +116,7 @@ public class DriveTrain extends PIDSubsystem {
 	
 	//Drives off of a controller by default
     public void initDefaultCommand() {
-    	setDefaultCommand(new ArcadeDrive());
+    	setDefaultCommand(new DifferentialDrive());
     }
     
 	@Override

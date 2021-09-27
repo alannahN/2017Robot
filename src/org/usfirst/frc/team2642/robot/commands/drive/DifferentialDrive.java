@@ -8,12 +8,12 @@ import edu.wpi.first.wpilibj.GenericHID.Hand;
 
 
 
-public class ArcadeDrive extends Command {
+public class DifferentialDrive extends Command {
 
 	static boolean flip = false;
 	static boolean buttonState = false;
 	
-    public ArcadeDrive() {
+    public DifferentialDrive() {
     	requires(Robot.driveTrain);
     }
 

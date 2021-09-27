@@ -12,7 +12,7 @@ public class FlipDrive extends InstantCommand {
 
     //Reverses the drive orientation
     protected void initialize() {
-    	ArcadeDrive.setFlip();
+    	DifferentialDrive.setFlip();
     }
 
 }
